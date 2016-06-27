@@ -1,5 +1,5 @@
 ---------------------------------------------------------		
-					SQL SELECT
+			SQL SELECT
 ---------------------------------------------------------
 		SELECT CustomerName,City FROM Customers; 
 					OR
@@ -7,13 +7,13 @@
 
 
 ---------------------------------------------------------
-					SELECT DISTINCT
+			SELECT DISTINCT
 ---------------------------------------------------------
 		SELECT DISTINCT City FROM Customers; 
 
 
 ---------------------------------------------------------
-					SQL SELECT TOP Clause
+			SQL SELECT TOP Clause
 ---------------------------------------------------------
 		 SELECT TOP 2 * FROM Customers; 
 					OR
@@ -21,14 +21,14 @@
 
 
 ---------------------------------------------------------
-					SQL WHERE Clause
+			SQL WHERE Clause
 ---------------------------------------------------------
 		SELECT * FROM Customers
 		WHERE Country='Mexico';
 
 
 ---------------------------------------------------------
-					Operators in The WHERE Clause
+			Operators in The WHERE Clause
 ---------------------------------------------------------
 		Operator 	Description
 		= 			Equal
@@ -43,7 +43,7 @@
 
 
 ----------------------------------------------------------
-					SQL AND & OR Operators
+			SQL AND & OR Operators
 ----------------------------------------------------------
 		SELECT * FROM Customers
 		WHERE Country='Germany'
@@ -51,14 +51,14 @@
 
 
 ----------------------------------------------------------
-					SQL ORDER BY Keyword
+			SQL ORDER BY Keyword
 ----------------------------------------------------------
 		SELECT * FROM Customers
 		ORDER BY Country ASC, CustomerName DESC;
 
 
 ----------------------------------------------------------
-					SQL INSERT INTO Statement
+			SQL INSERT INTO Statement
 ----------------------------------------------------------
 		INSERT INTO table_name
 		VALUES (value1,value2,value3,...);
@@ -68,7 +68,7 @@
 
 
 ----------------------------------------------------------
-					SQL UPDATE Statement
+			SQL UPDATE Statement
 ----------------------------------------------------------
 		UPDATE Customers
 		SET ContactName='Alfred Schmidt', City='Hamburg'
@@ -76,14 +76,14 @@
 
 
 ----------------------------------------------------------
-					SQL DELETE Statement
+			SQL DELETE Statement
 ----------------------------------------------------------
 		DELETE FROM Customers
 		WHERE CustomerName='Alfreds Futterkiste' AND ContactName='Maria Anders'; 
 
 
 ----------------------------------------------------------
-					SQL LIKE Operator
+			SQL LIKE Operator
 ----------------------------------------------------------
 		SELECT * FROM Customers
 		WHERE Country LIKE '%land%';
@@ -93,7 +93,7 @@
 
 
 -----------------------------------------------------------
-					SQL Wildcards
+			SQL Wildcards
 -----------------------------------------------------------
 		SELECT * FROM Customers
 		WHERE City LIKE '_erlin'; 
@@ -112,14 +112,14 @@
 
 
 ------------------------------------------------------------
-					SQL IN Operator
+			SQL IN Operator
 ------------------------------------------------------------
 		SELECT * FROM Customers
 		WHERE City IN ('Paris','London'); 
 
 
 ------------------------------------------------------------
-					SQL BETWEEN Operator
+			SQL BETWEEN Operator
 ------------------------------------------------------------
 		SELECT * FROM Products
 		WHERE (Price BETWEEN 10 AND 20)
@@ -127,7 +127,7 @@
 
 
 -------------------------------------------------------------
-					SQL Aliases
+			SQL Aliases
 -------------------------------------------------------------
 		SELECT o.OrderID, o.OrderDate, c.CustomerName
 		FROM Customers AS c, Orders AS o
@@ -135,7 +135,7 @@
 
 
 -------------------------------------------------------------
-					SQL INNER JOIN Keyword
+			SQL INNER JOIN Keyword
 -------------------------------------------------------------
 		SELECT Customers.CustomerName, Orders.OrderID
 		FROM Customers
@@ -145,7 +145,7 @@
 
 
 -------------------------------------------------------------
-					SQL LEFT JOIN Keyword
+			SQL LEFT JOIN Keyword
 -------------------------------------------------------------
 		SELECT Customers.CustomerName, Orders.OrderID
 		FROM Customers
@@ -155,7 +155,7 @@
 
 
 --------------------------------------------------------------
-					SQL RIGHT JOIN Keyword
+			SQL RIGHT JOIN Keyword
 --------------------------------------------------------------
 		SELECT Orders.OrderID, Employees.FirstName
 		FROM Orders
@@ -165,7 +165,7 @@
 
 
 --------------------------------------------------------------
-					SQL FULL OUTER JOIN Keyword
+			SQL FULL OUTER JOIN Keyword
 --------------------------------------------------------------
 		SELECT Customers.CustomerName, Orders.OrderID
 		FROM Customers
@@ -175,7 +175,7 @@
 
 
 --------------------------------------------------------------
-					SQL UNION Operator
+			SQL UNION Operator
 --------------------------------------------------------------
 		SELECT City FROM Customers
 		UNION
@@ -191,7 +191,7 @@
 
 
 ---------------------------------------------------------------
-					SQL SELECT INTO Statement
+			SQL SELECT INTO Statement
 ---------------------------------------------------------------
 
 		SELECT *
@@ -200,7 +200,7 @@
 
 
 ---------------------------------------------------------------
-					SQL INSERT INTO SELECT Statement
+			SQL INSERT INTO SELECT Statement
 ---------------------------------------------------------------
 
 		INSERT INTO Customers (CustomerName, Country)
@@ -208,7 +208,7 @@
 
 
 ---------------------------------------------------------------
-					SQL Constraints
+			SQL Constraints
 ---------------------------------------------------------------
 		SQL constraints are used to specify rules for the data in a table.
 
@@ -232,7 +232,7 @@
 		)
 
 ---------------------------------------------------------------
-					SQL NOT NULL Constraint
+			SQL NOT NULL Constraint
 ---------------------------------------------------------------
 		The NOT NULL constraint enforces a column to NOT accept NULL values.
 		The NOT NULL constraint enforces a field to always contain a value. 
@@ -241,7 +241,7 @@
 		
 		
 ----------------------------------------------------------------
-					SQL UNIQUE Constraint
+			SQL UNIQUE Constraint
 ----------------------------------------------------------------
 		The UNIQUE constraint uniquely identifies each record in a database table.
 		The UNIQUE and PRIMARY KEY constraints both provide a guarantee for uniqueness for a column or set of columns.
@@ -250,7 +250,7 @@
 
 		
 ---------------------------------------------------------------
-					SQL PRIMARY KEY Constraint
+			SQL PRIMARY KEY Constraint
 ---------------------------------------------------------------
 		The PRIMARY KEY constraint uniquely identifies each record in a database table.
 		Primary keys must contain UNIQUE values.
@@ -259,13 +259,13 @@
 
 		
 ----------------------------------------------------------------
-					SQL FOREIGN KEY Constraint
+			SQL FOREIGN KEY Constraint
 ----------------------------------------------------------------
 		A FOREIGN KEY in one table points to a PRIMARY KEY in another table.
 
 
 ----------------------------------------------------------------
-					SQL CHECK Constraint
+			SQL CHECK Constraint
 ----------------------------------------------------------------
 		The CHECK constraint is used to limit the value range that can be placed in a column.
 		If you define a CHECK constraint on a single column it allows only certain values for this column.
@@ -273,7 +273,7 @@
 
 
 ----------------------------------------------------------------
-					SQL DEFAULT Constraint
+			SQL DEFAULT Constraint
 ----------------------------------------------------------------
 		The DEFAULT constraint is used to insert a default value into a column.
 		The default value will be added to all new records, if no other value is specified.
@@ -289,7 +289,7 @@
 
 
 -----------------------------------------------------------------
-					SQL ALTER TABLE Statement
+			SQL ALTER TABLE Statement
 -----------------------------------------------------------------
 		The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
 
@@ -301,7 +301,7 @@
 				
 
 -----------------------------------------------------------------
-					SQL AUTO INCREMENT Field
+			SQL AUTO INCREMENT Field
 -----------------------------------------------------------------
 		Auto-increment allows a unique number to be generated when a new record is inserted into a table.
 
@@ -317,7 +317,7 @@
 
 
 ------------------------------------------------------------------
-					SQL Views
+			SQL Views
 ------------------------------------------------------------------
 		In SQL, a view is a virtual table based on the result-set of an SQL statement.
 		A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
@@ -341,7 +341,7 @@
 
 
 -----------------------------------------------------------------
-					MySQL Date Functions
+			MySQL Date Functions
 -----------------------------------------------------------------
 		The following table lists the most important built-in date functions in MySQL:
 		Function 	Description
@@ -357,7 +357,7 @@
 
 
 ------------------------------------------------------------------
-					SQL Functions
+			SQL Functions
 ------------------------------------------------------------------
 		SQL has many built-in functions for performing calculations on data.
 		SQL Aggregate Functions
@@ -390,7 +390,7 @@
 
 
 --------------------------------------------------------------------
-					SQL GROUP BY Statement
+			SQL GROUP BY Statement
 --------------------------------------------------------------------
 		Aggregate functions often need an added GROUP BY statement.
 		The GROUP BY statement is used in conjunction with the aggregate functions to group the result-set by one or more columns.
@@ -402,7 +402,7 @@
 
 
 --------------------------------------------------------------------
-					SQL HAVING Clause
+			SQL HAVING Clause
 --------------------------------------------------------------------
 		The HAVING clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
 		
