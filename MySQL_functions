@@ -7,7 +7,9 @@ MySQL Functions :
 -- MySQL date and time functions
 -- Other MySQL function
 
+
 MySQL Aggregate Functions : To perform calculations in a query, you use aggregate functions.
+
 
 AVG function : The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
 
@@ -41,6 +43,44 @@ Output : 1,2,3,4,5,6
 
 example2 : SELECT GROUP_CONCAT(country) FROM customers;
 Output : India,Pak,Nepal,USA,UK
+
+
+MySQL string functions : 
+
+
+MySQL CONCAT function : 
+
+example : SELECT CONCAT('first_name',' ','last_name') as full_name from users;
+
+MySQL Replace String Function : 
+
+Syntax : UPDATE tbl_name 
+  SET 
+    field_name = REPLACE(field_name,
+        string_to_find,
+        string_to_replace)
+WHERE
+    conditions;
+    
+example : UPDATE products 
+  SET 
+    productDescription = REPLACE(productDescription,'abuot','about');
+    
+MySQL SUBSTRING Function : The SUBSTRING function returns a substring with a given length from a string starting at a specific 
+position. 
+
+example : SELECT SUBSTRING('MYSQL SUBSTRING', 10);
+Output : STRING
+
+MySQL LEFT Function : The LEFT function is a string function that returns the left part of a string with a specified length.
+Example : SELECT LEFT('MySQL LEFT', 7);
+Output : MySQL L
+
+
+
+
+
+
 
 
 
