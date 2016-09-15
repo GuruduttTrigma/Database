@@ -11,31 +11,37 @@ MySQL Functions :
                                         MySQL Aggregate Functions : 
 To perform calculations in a query, you use aggregate functions.
 
-AVG function : The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
+AVG function : 
+The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
 
 example : SELECT AVG(buyPrice) as average_buy_price FROM products
 
-COUNT function : The COUNT function returns the number of the rows in a table.
+COUNT function : 
+The COUNT function returns the number of the rows in a table.
 
 example : SELECT COUNT(*) AS Total FROM products
 
-SUM function : The SUM function returns the sum of a set of values. The SUM function ignores NULL values.
+SUM function : 
+The SUM function returns the sum of a set of values. The SUM function ignores NULL values.
 
 example : SELECT productCode,sum(priceEach * quantityOrdered) total
 FROM orderdetails
 GROUP by productCode
 
-MAX function : The MAX function returns the maximum value in a set of values.
+MAX function : 
+The MAX function returns the maximum value in a set of values.
 
 example: SELECT MAX(buyPrice) highest_price,
 FROM Products
 
-MIN function : The MIN function returns the minimum value in a set of values.
+MIN function : 
+The MIN function returns the minimum value in a set of values.
 
 example : SELECT MIN(buyPrice) lowest_price,
 FROM Products
 
-GROUP_CONCAT function : The MySQL GROUP_CONCAT function concatenates strings from a group into a single string with various 
+GROUP_CONCAT function : 
+The MySQL GROUP_CONCAT function concatenates strings from a group into a single string with various 
 options.
 
 example1 : SELECT GROUP_CONCAT(DISTINCT id ORDER BY id ASC SEPARATOR ',') FROM users;
@@ -47,13 +53,11 @@ Output : India,Pak,Nepal,USA,UK
 
                                             MySQL string functions : 
 
-
 MySQL CONCAT function : 
 
 example : SELECT CONCAT('first_name',' ','last_name') as full_name from users;
 
 MySQL Replace String Function : 
-
 Syntax : 
 UPDATE tbl_name 
 SET field_name = REPLACE(field_name,string_to_find,string_to_replace)
@@ -63,17 +67,20 @@ example :
 UPDATE products 
 SET productDescription = REPLACE(productDescription,'abuot','about');
     
-MySQL SUBSTRING Function : The SUBSTRING function returns a substring with a given length from a string starting at a specific 
+MySQL SUBSTRING Function : 
+The SUBSTRING function returns a substring with a given length from a string starting at a specific 
 position. 
 
 example : SELECT SUBSTRING('MYSQL SUBSTRING', 10);
 Output : STRING
 
-MySQL LEFT Function : The LEFT function is a string function that returns the left part of a string with a specified length.
+MySQL LEFT Function : 
+The LEFT function is a string function that returns the left part of a string with a specified length.
 Example : SELECT LEFT('MySQL LEFT', 7);
 Output : MySQL L
 
-MySQL FIND_IN_SET Function : MySQL provides a built-in string function called FIND_IN_SET that allows you to find the 
+MySQL FIND_IN_SET Function : 
+MySQL provides a built-in string function called FIND_IN_SET that allows you to find the 
 position of a string within a comma-separated list of strings.
 
 The FIND_IN_SET function accepts two parameters:
@@ -90,19 +97,22 @@ The FIND_IN_SET function returns an integer or a NULL value depending on the val
 Example : SELECT FIND_IN_SET('x','x,y,z');
 Output : 1
 
-MySQL TRIM Function :  removes unwanted characters from a string.
+MySQL TRIM Function :  
+Removes unwanted characters from a string.
 
 Example : SELECT TRIM(' MySQL TRIM Function ');
 Output : MySQL TRIM Function
 
-MySQL INSTR Function :Sometimes, you want to locate a substring in a string or to check if a substring exists in a string. 
+MySQL INSTR Function :
+Sometimes, you want to locate a substring in a string or to check if a substring exists in a string. 
 In this case, you can use a string built-in function called INSTR.
 
 Example : SELECT INSTR('MySQL INSTR', 'mysql');
 Output : 1
 
 
-MySQL FORMAT Function : Sometimes, you use an expression or an aggregate function such as AVG to calculate values in the 
+MySQL FORMAT Function : 
+Sometimes, you use an expression or an aggregate function such as AVG to calculate values in the 
 databases such as inventory turnover, the average net price of products, the average invoice value, etc.
 
 Example : SELECT FORMAT(12500.2015, 1);
@@ -111,7 +121,8 @@ Ootput : 12,500.2
 
                                             MySQL control flow functions 
 
-MySQL IF Function : MySQL IF function is one of the MySQL control flow functions that returns a value based on a condition. 
+MySQL IF Function : 
+MySQL IF function is one of the MySQL control flow functions that returns a value based on a condition. 
 The IF function is sometimes referred to as IF ELSE or IF THEN ELSE function.
 
 Example 1 : SELECT IF(1 = 2,'male','female') as gender;
@@ -136,19 +147,22 @@ SELECT
 FROM
     orders;
 
-MySQL IFNULL : MySQL IFNULL function is one of the MySQL control flow functions that accepts two arguments and returns the 
+MySQL IFNULL : 
+MySQL IFNULL function is one of the MySQL control flow functions that accepts two arguments and returns the 
 first argument if it is not NULL. Otherwise, the IFNULL function returns the second argument.
 
 Example : SELECT IFNULL(1,0);
 Output : 1
 
-MySQL NULLIF : The NULLIF function is one of the control flow functions that accepts 2 arguments. The NULLIF function returns 
+MySQL NULLIF : 
+The NULLIF function is one of the control flow functions that accepts 2 arguments. The NULLIF function returns 
 NULL if the first argument is equal to the second argument, otherwise it returns the first argument.
 
 Example : SELECT NULLIF(1,1);
 null
 
-MySQL CASE Expression : MySQL CASE expression is a flow control structure that allows you to construct conditions inside a 
+MySQL CASE Expression : 
+MySQL CASE expression is a flow control structure that allows you to construct conditions inside a 
 query such as SELECT or WHERE clause. MySQL provides you with two forms of the CASE expressions.
 
 Example : 
@@ -170,12 +184,14 @@ Shipped	On Hold	In Process	Resolved	Cancelled	Disputed	Total
 
                                         MySQL date and time functions : 
 
-MySQL DATEDIFF Function : The MySQL DATEDIFF function calculates the number of days between two DATE, DATETIME, or TIMESTAMP 
+MySQL DATEDIFF Function : 
+The MySQL DATEDIFF function calculates the number of days between two DATE, DATETIME, or TIMESTAMP 
 values.
 
 Example : SELECT DATEDIFF('2011-08-17','2011-08-08'); --  9 days
 
-MySQL DATE_FORMAT Function : To format a date value to a specific format, you use the DATE_FORMAT function. The syntax of the 
+MySQL DATE_FORMAT Function : 
+To format a date value to a specific format, you use the DATE_FORMAT function. The syntax of the 
 DATE_FORMAT function is as follows:
 
 The DATE_FORMAT function accepts two arguments:
@@ -200,7 +216,8 @@ orderNumber	orderDate	requireddate	    shippedDate
 10101	    2003-01-09	Sat 18th Jan 2003	Saturday 11th January 2003
 10102	    2003-01-10	Sat 18th Jan 2003	Tuesday 14th January 2003
 
-MySQL STR_TO_DATE() Function : The STR_TO_DATE() converts the str string into a date value based on the fmt format string.
+MySQL STR_TO_DATE() Function : 
+The STR_TO_DATE() converts the str string into a date value based on the fmt format string.
 
 Example : SELECT STR_TO_DATE('21,5,2013','%d,%m,%Y') as date;
 
@@ -208,7 +225,8 @@ Output :
 date
 2013-05-21
 
-MySQL NOW() Function : The MySQL NOW() function returns the current date and time in the configured time zone as a string or 
+MySQL NOW() Function : 
+The MySQL NOW() function returns the current date and time in the configured time zone as a string or 
 a number in the 'YYYY-MM-DD HH:MM:DD' or 'YYYYMMDDHHMMSS.uuuuuu' format.
 
 Example : SELECT NOW() as current_date;
@@ -220,7 +238,8 @@ current_date
                                             Other MySQL functions : 
 
 
-MySQL LAST_INSERT_ID Function : In database design, you often use a surrogate key to generate unique integer values for the 
+MySQL LAST_INSERT_ID Function : 
+In database design, you often use a surrogate key to generate unique integer values for the 
 primary key column using the AUTO_INCREMENT attribute.
 
 It means when you insert a new row into the table that has an AUTO_INCREMENT column, MySQL automatically generates a unique 
@@ -229,7 +248,8 @@ integer and use it for the column.
 Example : SELECT LAST_INSERT_ID();
 2
 
-MySQL CAST Function : The CAST() function converts a value of any type into a value that has a specified type. The target type 
+MySQL CAST Function : 
+The CAST() function converts a value of any type into a value that has a specified type. The target type 
 can be any one of the following types: BINARY, CHAR, DATE, DATETIME, TIME,DECIMAL, SIGNED, UNSIGNED .
 
 The CAST() function is often used to return a value with a specified type for comparison in the WHERE, JOIN, and HAVING clauses.
