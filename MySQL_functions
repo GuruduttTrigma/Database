@@ -170,14 +170,70 @@ Shipped	On Hold	In Process	Resolved	Cancelled	Disputed	Total
 
 MySQL date and time functions : 
 
+MySQL DATEDIFF Function : The MySQL DATEDIFF function calculates the number of days between two DATE, DATETIME, or TIMESTAMP 
+values.
+
+Example : SELECT DATEDIFF('2011-08-17','2011-08-08'); --  9 days
+
+MySQL DATE_FORMAT Function : To format a date value to a specific format, you use the DATE_FORMAT function. The syntax of the 
+DATE_FORMAT function is as follows:
+
+The DATE_FORMAT function accepts two arguments:
+
+    date : is a valid date value that you want to format
+    format : is a format string that consists of predefined specifiers. Each specifier is preceded by a percentage character 
+    ( % ). See the table below for a list of predefined specifiers.
+
+Example : 
+
+SELECT 
+    orderNumber,
+    DATE_FORMAT(orderdate, '%Y-%m-%d') orderDate,
+    DATE_FORMAT(requireddate, '%a %D %b %Y') requireddate,
+    DATE_FORMAT(shippedDate, '%W %D %M %Y') shippedDate
+FROM
+    orders;
+
+Output : 
+orderNumber	orderDate	requireddate	    shippedDate
+10100	    2003-01-06	Mon 13th Jan 2003	Friday 10th January 2003
+10101	    2003-01-09	Sat 18th Jan 2003	Saturday 11th January 2003
+10102	    2003-01-10	Sat 18th Jan 2003	Tuesday 14th January 2003
+
+MySQL STR_TO_DATE() Function : The STR_TO_DATE() converts the str string into a date value based on the fmt format string.
+
+Example : SELECT STR_TO_DATE('21,5,2013','%d,%m,%Y') as date;
+
+Output : 
+date
+2013-05-21
+
+MySQL NOW() Function : The MySQL NOW() function returns the current date and time in the configured time zone as a string or 
+a number in the 'YYYY-MM-DD HH:MM:DD' or 'YYYYMMDDHHMMSS.uuuuuu' format.
+
+Example : SELECT NOW() as current_date;
+Output : 
+current_date
+2016-09-15 05:07:22
 
 
+Other MySQL functions : 
 
 
+MySQL LAST_INSERT_ID Function : In database design, you often use a surrogate key to generate unique integer values for the 
+primary key column using the AUTO_INCREMENT attribute.
 
+It means when you insert a new row into the table that has an AUTO_INCREMENT column, MySQL automatically generates a unique 
+integer and use it for the column.
 
+Example : SELECT LAST_INSERT_ID();
+2
 
+MySQL CAST Function : The CAST() function converts a value of any type into a value that has a specified type. The target type 
+can be any one of the following types: BINARY, CHAR, DATE, DATETIME, TIME,DECIMAL, SIGNED, UNSIGNED .
 
+The CAST() function is often used to return a value with a specified type for comparison in the WHERE, JOIN, and HAVING clauses.
 
-
+Example : SELECT (1 + CAST('1' AS UNSIGNED))/2;
+1.00000
 
