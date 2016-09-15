@@ -10,26 +10,32 @@ MySQL Functions :
 MySQL Aggregate Functions : To perform calculations in a query, you use aggregate functions.
 
 AVG function : The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
+
 example : SELECT AVG(buyPrice) as average_buy_price FROM products
 
 COUNT function : The COUNT function returns the number of the rows in a table.
+
 example : SELECT COUNT(*) AS Total FROM products
 
 SUM function : The SUM function returns the sum of a set of values. The SUM function ignores NULL values.
+
 example : SELECT productCode,sum(priceEach * quantityOrdered) total
 FROM orderdetails
 GROUP by productCode
 
 MAX function : The MAX function returns the maximum value in a set of values.
+
 example: SELECT MAX(buyPrice) highest_price,
 FROM Products
 
 MIN function : The MIN function returns the minimum value in a set of values.
+
 example : SELECT MIN(buyPrice) lowest_price,
 FROM Products
 
 GROUP_CONCAT function : The MySQL GROUP_CONCAT function concatenates strings from a group into a single string with various 
 options.
+
 example1 : SELECT GROUP_CONCAT(DISTINCT id ORDER BY id ASC SEPARATOR ',') FROM users;
 Output : 1,2,3,4,5,6
 
