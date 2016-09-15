@@ -8,8 +8,8 @@ MySQL Functions :
 -- Other MySQL function
 
 
-MySQL Aggregate Functions : To perform calculations in a query, you use aggregate functions.
-
+                                        MySQL Aggregate Functions : 
+To perform calculations in a query, you use aggregate functions.
 
 AVG function : The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
 
@@ -45,7 +45,7 @@ example2 : SELECT GROUP_CONCAT(country) FROM customers;
 Output : India,Pak,Nepal,USA,UK
 
 
-MySQL string functions : 
+                                            MySQL string functions : 
 
 
 MySQL CONCAT function : 
@@ -109,7 +109,7 @@ Example : SELECT FORMAT(12500.2015, 1);
 Ootput : 12,500.2
 
 
-MySQL control flow functions 
+                                            MySQL control flow functions 
 
 MySQL IF Function : MySQL IF function is one of the MySQL control flow functions that returns a value based on a condition. 
 The IF function is sometimes referred to as IF ELSE or IF THEN ELSE function.
@@ -168,7 +168,7 @@ Shipped	On Hold	In Process	Resolved	Cancelled	Disputed	Total
 303	      4	        6	        4	        6	        3	    326
 
 
-MySQL date and time functions : 
+                                        MySQL date and time functions : 
 
 MySQL DATEDIFF Function : The MySQL DATEDIFF function calculates the number of days between two DATE, DATETIME, or TIMESTAMP 
 values.
@@ -217,7 +217,7 @@ current_date
 2016-09-15 05:07:22
 
 
-Other MySQL functions : 
+                                            Other MySQL functions : 
 
 
 MySQL LAST_INSERT_ID Function : In database design, you often use a surrogate key to generate unique integer values for the 
