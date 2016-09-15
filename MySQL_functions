@@ -28,6 +28,17 @@ MIN function : The MIN function returns the minimum value in a set of values.
 example : SELECT MIN(buyPrice) lowest_price,
 FROM Products
 
+GROUP_CONCAT function : The MySQL GROUP_CONCAT function concatenates strings from a group into a single string with various 
+options.
+example1 : SELECT GROUP_CONCAT(DISTINCT id ORDER BY id ASC SEPARATOR ',') FROM users;
+Output : 1,2,3,4,5,6
+
+example2 : SELECT GROUP_CONCAT(country) FROM customers;
+Output : India,Pak,Nepal,USA,UK
+
+
+
+
 
 
 
