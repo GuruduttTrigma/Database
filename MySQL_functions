@@ -54,17 +54,14 @@ example : SELECT CONCAT('first_name',' ','last_name') as full_name from users;
 
 MySQL Replace String Function : 
 
-Syntax : UPDATE tbl_name 
-  SET 
-    field_name = REPLACE(field_name,
-        string_to_find,
-        string_to_replace)
-WHERE
-    conditions;
+Syntax : 
+UPDATE tbl_name 
+SET field_name = REPLACE(field_name,string_to_find,string_to_replace)
+WHERE conditions;
     
-example : UPDATE products 
-  SET 
-    productDescription = REPLACE(productDescription,'abuot','about');
+example : 
+UPDATE products 
+SET productDescription = REPLACE(productDescription,'abuot','about');
     
 MySQL SUBSTRING Function : The SUBSTRING function returns a substring with a given length from a string starting at a specific 
 position. 
@@ -75,6 +72,43 @@ Output : STRING
 MySQL LEFT Function : The LEFT function is a string function that returns the left part of a string with a specified length.
 Example : SELECT LEFT('MySQL LEFT', 7);
 Output : MySQL L
+
+MySQL FIND_IN_SET Function : MySQL provides a built-in string function called FIND_IN_SET that allows you to find the 
+position of a string within a comma-separated list of strings.
+
+The FIND_IN_SET function accepts two parameters:
+
+    The first parameter needle is the string that you want to find.
+    The second parameter haystack is a list of comma-separated strings that to be searched.
+
+The FIND_IN_SET function returns an integer or a NULL value depending on the value of the arguments:
+
+    Return a NULL value if either needle or haystack is NULL.
+    Return zero if the needle is not in the haystack or the haystack is an empty string.
+    Return a positive integer if the needle is in the haystack.
+    
+Example : SELECT FIND_IN_SET('x','x,y,z');
+Output : 1
+
+MySQL TRIM Function :  removes unwanted characters from a string.
+
+Example : SELECT TRIM(' MySQL TRIM Function ');
+Output : MySQL TRIM Function
+
+MySQL INSTR Function :Sometimes, you want to locate a substring in a string or to check if a substring exists in a string. 
+In this case, you can use a string built-in function called INSTR.
+
+Example : SELECT INSTR('MySQL INSTR', 'mysql');
+Output : 1
+
+
+MySQL FORMAT Function : Sometimes, you use an expression or an aggregate function such as AVG to calculate values in the 
+databases such as inventory turnover, the average net price of products, the average invoice value, etc.
+
+Example : SELECT FORMAT(12500.2015, 1);
+Ootput : 12,500.2
+
+
 
 
 
