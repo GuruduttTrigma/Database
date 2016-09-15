@@ -109,10 +109,66 @@ Example : SELECT FORMAT(12500.2015, 1);
 Ootput : 12,500.2
 
 
+MySQL control flow functions 
+
+MySQL IF Function : MySQL IF function is one of the MySQL control flow functions that returns a value based on a condition. 
+The IF function is sometimes referred to as IF ELSE or IF THEN ELSE function.
+
+Example 1 : SELECT IF(1 = 2,'male','female') as gender;
+Output : 
+gender
+-----
+female
+
+Example 2 : 
+SELECT 
+    customerNumber,
+    customerName,
+    IF(state IS NULL, 'N/A', state) state,
+    country
+FROM
+    customers;
+
+Example 3 : 
+SELECT 
+    SUM(IF(status = 'Shipped', 1, 0)) AS Shipped,
+    SUM(IF(status = 'Cancelled', 1, 0)) AS Cancelled
+FROM
+    orders;
+
+MySQL IFNULL : MySQL IFNULL function is one of the MySQL control flow functions that accepts two arguments and returns the 
+first argument if it is not NULL. Otherwise, the IFNULL function returns the second argument.
+
+Example : SELECT IFNULL(1,0);
+Output : 1
+
+MySQL NULLIF : The NULLIF function is one of the control flow functions that accepts 2 arguments. The NULLIF function returns 
+NULL if the first argument is equal to the second argument, otherwise it returns the first argument.
+
+Example : SELECT NULLIF(1,1);
+null
+
+MySQL CASE Expression : MySQL CASE expression is a flow control structure that allows you to construct conditions inside a 
+query such as SELECT or WHERE clause. MySQL provides you with two forms of the CASE expressions.
+
+Example : 
+SELECT 
+    SUM(CASE WHEN status = 'Shipped' THEN 1 ELSE 0 END) AS 'Shipped',
+    SUM(CASE WHEN status = 'On Hold' THEN 1 ELSE 0 END) AS 'On Hold',
+    SUM(CASE WHEN status = 'In Process' THEN 1 ELSE 0 END) AS 'In Process',
+    SUM(CASE WHEN status = 'Resolved' THEN 1 ELSE 0 END) AS 'Resolved',
+    SUM(CASE WHEN status = 'Cancelled' THEN 1 ELSE 0 END) AS 'Cancelled',
+    SUM(CASE WHEN status = 'Disputed' THEN 1 ELSE 0 END) AS 'Disputed',
+    COUNT(*) AS Total
+FROM
+    orders;
+    
+Output : 
+Shipped	On Hold	In Process	Resolved	Cancelled	Disputed	Total
+303	      4	        6	        4	        6	        3	    326
 
 
-
-
+MySQL date and time functions : 
 
 
 
