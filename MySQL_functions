@@ -1,0 +1,15 @@
+
+MySQL Functions :
+
+-- MySQL aggregate functions 
+-- MySQL string functions
+-- MySQL control flow functions
+-- MySQL date and time functions
+-- Other MySQL function
+
+MySQL Aggregate Functions  : To perform calculations in a query, you use aggregate functions.
+
+AVG function : The AVG function calculates the average value of a set of values. It ignores NULL values in the calculation.
+
+
+
