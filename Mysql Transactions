@@ -1,1 +1,33 @@
+MySQL Transaction : 
 
+A transaction is usually a result that occur when a user program is executing or execute.IT is a unit of program execution that access and 
+update various tables.
+
+Transaction Properties : ACID Properties
+
+Atomicity: Atomicity indicate that either the operations of transactions are executed completly or not at all.
+Consistancy: Database shouldremain in consistent state before execution of transaction or after execution of transaction.
+Isolation: If you are in the middle of the transactions other process wont be able to see the data until the transaction is complete.
+Durability: After the transaction complete successfully the changes it has made to the database persists dispits failure of system.
+
+START TRANSACTION, COMMIT, and ROLLBACK Syntax:
+
+These statements provide control over use of transactions:
+
+START TRANSACTION or BEGIN start a new transaction.
+COMMIT commits the current transaction, making its changes permanent.
+ROLLBACK rolls back the current transaction, canceling its changes.
+SET autocommit disables or enables the default autocommit mode for the current session.
+
+By default, MySQL runs with autocommit mode enabled. This means that as soon as you execute a statement that updates (modifies) a table,
+MySQL stores the update on disk to make it permanent. The change cannot be rolled back.
+To disable autocommit mode implicitly for a single series of statements, use the START TRANSACTION statement:
+
+example: 
+START TRANSACTION;
+SELECT @A:=SUM(salary) FROM table1 WHERE type=1;
+UPDATE table2 SET summary=@A WHERE type=1;
+COMMIT;
+
+With START TRANSACTION, autocommit remains disabled until you end the transaction with COMMIT or ROLLBACK. The autocommit mode then reverts
+to its previous state.
