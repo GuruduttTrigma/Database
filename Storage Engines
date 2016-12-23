@@ -1,2 +1,9 @@
 http://www.xpertdeveloper.com/2011/11/row-locking-with-mysql/
 http://stackoverflow.com/questions/15678406/when-to-use-myisam-and-innodb
+
+Table locking:
+http://www.mysqltutorial.org/mysql-table-locking/
+http://stackoverflow.com/questions/6621303/how-do-i-lock-read-write-to-mysql-tables-so-that-i-can-select-and-then-insert-wi
+
+Row Locking:
+http://stackoverflow.com/questions/33800234/row-level-locking-in-mysql
